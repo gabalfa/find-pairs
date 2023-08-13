@@ -25,5 +25,5 @@ It is a function that finds pairs of integers from a list that sum to a given va
 ```
 
 #### Overall Analysis:
-The space complexity of the code is O(n) due to the usage of the numbersSeen Set and the pairs array.
-The time complexity of the code is O(n) due to the single loop that iterates through the listNumbers array.
+- The space complexity of the code is O(n) due to the usage of the numbersSeen Set and the pairs array.
+- The time complexity of the code is O(n) due to the single loop that iterates through the listNumbers array.
