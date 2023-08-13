@@ -1,0 +1,17 @@
+{
+  "name": "findpairs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "performance.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "challenge"
+  ],
+  "author": "gabalfa",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
