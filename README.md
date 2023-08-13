@@ -14,7 +14,7 @@ well as the target sum.
 ```
 
 ## Solution 
-It is a function that finds pairs of integers from a list that sum to a given value, its temporal and spatial complexity was evaluated through the Big-O notation, in addition, it implements unit tests using Jest to validate the correctness of the code.
+It is a function that finds pairs of integers from a list that sum to a given value, its time and space complexity was evaluated through the Big-O notation, in addition, it implements unit tests using Jest to validate the correctness of the code.
 
 
 ```bash
@@ -23,3 +23,7 @@ It is a function that finds pairs of integers from a list that sum to a given va
     npm install
     npm run test
 ```
+
+#### Overall Analysis:
+The space complexity of the code is O(n) due to the usage of the numbersSeen Set and the pairs array.
+The time complexity of the code is O(n) due to the single loop that iterates through the listNumbers array.
