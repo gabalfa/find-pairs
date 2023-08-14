@@ -11,4 +11,12 @@ describe("findPairs", () => {
       console.log([pair[0], pair[1]]);
     });
   });
+
+  it("should return an array with a specific length", () => {
+    const listNumbers = [1, 9, 5, 0, 20, -4, 12, 16, 7];
+    const givenValue = 12;
+    const returnedPairs = findPairs(listNumbers, givenValue);
+
+    expect(3).toEqual(returnedPairs.length);
+  });
 });
