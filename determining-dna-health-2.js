@@ -15,18 +15,6 @@ for (let index = 0; index < s; index++) {
   const d = arrStrands[index][2];
   let healthy = 0;
 
-  for (let gene = first; gene <= last; gene++) {
-    const pattern = new RegExp(genes[gene], "g");
-    let matches = d.match(pattern);
-
-    if (matches && genes[gene].length > 1) {
-      matches = new Array(genes[gene].length).fill(genes[gene]);
-    }
-    if (matches) {
-      healthy += health[gene] * matches.length;
-    }
-  }
-
   results.push(healthy);
 }
 
