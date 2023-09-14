@@ -15,19 +15,31 @@ for (let index = 0; index < s; index++) {
   const d = arrStrands[index][2];
   let healthy = 0;
 
-  for (let gene = first; gene <= last; gene++) {
-    const pattern = new RegExp(genes[gene], "g");
-    let matches = d.match(pattern);
-
-    if (matches && genes[gene].length > 1) {
-      matches = new Array(genes[gene].length).fill(genes[gene]);
-    }
-    if (matches) {
-      healthy += health[gene] * matches.length;
+  for (let indexGene = first; indexGene < last; indexGene++) {
+    const gene = genes[indexGene];
+    for (let indexLetter = 0; indexLetter < gene.length; indexLetter++) {
+      let indexDNA = d.length - 1;
+      let matches = 0;
+      while (indexDNA >= 0) {
+        if (d[indexDNA] == gene[indexLetter]) {
+          console.log("if:", indexGene);
+          matches++;
+          if (matches === gene.length) {
+            healthy += health[indexGene];
+          }
+        }
+        indexDNA--;
+      }
     }
   }
 
   results.push(healthy);
 }
+// console.log(`${Math.min(...results)} ${Math.max(...results)}`);
+console.log(results);
 
-console.log(`${Math.min(...results)} ${Math.max(...results)}`);
+//  genes:      b c aa d b
+//              ^
+//              ^
+// string:      c a a a b
+//                      ^
